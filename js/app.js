@@ -45,14 +45,17 @@ for (let i = 0; i < teamPeople.length; i++) {
 	const team = teamPeople[i]
 	const fullName = team.fullName
 	const role = team.role
-	const avatar = team.avatar
+    const avatar = team.avatar
 
 	const teamHtml = 
-    ` <tr>
-        <td>${fullName}</td>
-        <td>${role}</td>
-        <td>${avatar}/</td>
-    </tr>`
+    `
+    <div class="card">
+        <img src="./img/${avatar}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${fullName}</h5>
+            <p class="card-text">${role}</p>
+        </div>
+    </div>`
 
 	htmlTeamPrint.innerHTML += teamHtml
 }
